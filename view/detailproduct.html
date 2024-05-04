@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Product</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"
+      integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <header>
+        <div class="container" style="margin-bottom: 75px">
+          <nav style="height: 75px" class="navbar navbar-expand-lg bg-white fixed-top">
+            <div class="container">
+              <a class="col-4 col-sm-3 col-lg-2 navbar-brand me-auto" href="./home.html"><img class="img-fluid" src="https://e-tech.monamedia.net/wp-content/uploads/2024/03/mona-2-e1709794932514.png" alt="" /></a>
+
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header pb-0">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    <a href="./home.html"><img class="img-fluid object-fit-contain" style="width: 50%" src="https://e-tech.monamedia.net/wp-content/uploads/2024/03/mona-2-e1709794932514.png" alt="" /></a>
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body pt-0">
+                  <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="./home.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="#">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="./product.html" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Sản phẩm </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./product.html">Tất cả sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="#">Máy tính</a></li>
+                        <li><a class="dropdown-item" href="#">Camera</a></li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="#">Điện thoại</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="./news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="./contact.html">Liên hệ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="nav">
+                <li class="nav-item">
+                  <button type="button" class="nav-link p-3 btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fs-4 text-black fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </li>
+
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <a class="nav-link p-3" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fs-4 text-black fa-solid fa-user"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="./login.html">Đăng nhập</a></li>
+                      <li><a class="dropdown-item" href="./register.html">Đăng ký</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link p-3 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#Cart_offcanvasRightt" aria-controls="Cart_offcanvasRightt">
+                    <i class="fa-fade">
+                      <i class="fs-4 text-black fa-solid fa-cart-plus fa-shake"></i>
+                      <span class="position-absolute top-75 start-100 translate-middle badge rounded-pill bg-warning"> 0+ </span>
+                    </i>
+                  </a>
+
+                  <!-- <a class="nav-link p-3 position-relative" href="#">
+                    <i class="fa-fade">
+                      <i class="fs-4 text-black fa-solid fa-cart-plus fa-shake"></i>
+                      <span class="position-absolute top-75 start-100 translate-middle badge rounded-pill bg-warning"> 0+ </span>
+                    </i>
+                  </a> -->
+                </li>
+              </ul>
+              <button class="navbar-toggler btn-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+
+          <!-- cart navbar Hiddeneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee  -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="Cart_offcanvasRightt" aria-labelledby="offcanvasRightLabel">
+            <div style="border-bottom: 2px solid rgb(238, 238, 238)" class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">Giỏ hàng (0 sản phẩm)</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <div class="card mb-3 border-bottom border-0 rounded-0" style="max-width: 540px">
+                <div class="row g-0">
+                  <div class="col-md-4" style="padding: 16px">
+                    <img style="height: 100px" src="../images/prod_1.png" class="img-fluid object-fit-cover" alt="..." />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden" class="card-title">Meta Quest 2 128 GB All-in-One VR System Blazing-fast processor.</h5>
+                      <p class="card-text">Đơn giá 925,000 ₫.</p>
+                      <div class="quantity">
+                        <input type="button" value="-" class="minus btn rounded-0 m-0" style="background-color: #e3e3e3" />
+                        <input class="btn btn-warning rounded-0 px-1" type="number" min="0" max="500" value="1" value="" />
+                        <input type="button" value="+" class="plus m-0 btn rounded-0" style="background-color: #e3e3e3" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 border-bottom border-0 rounded-0" style="max-width: 540px">
+                <div class="row g-0">
+                  <div class="col-md-4" style="padding: 16px">
+                    <img style="height: 100px" src="../images/prod_1.png" class="img-fluid object-fit-cover" alt="..." />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden" class="card-title">Meta Quest 2 128 GB All-in-One VR System Blazing-fast processor.</h5>
+                      <p class="card-text">Đơn giá 925,000 ₫.</p>
+                      <div class="quantity">
+                        <input type="button" value="-" class="minus btn rounded-0 m-0" style="background-color: #e3e3e3" />
+                        <input class="btn btn-warning rounded-0 px-1" type="number" min="0" max="500" value="1" value="" />
+                        <input type="button" value="+" class="plus m-0 btn rounded-0" style="background-color: #e3e3e3" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="total">
+                <span class="total-title fs-5">Tổng phụ : </span>
+                <span class="total-Price-amount amount fs-4 fw-semibold"> 925,000<span class="total-Price-currencySymbol">₫</span> </span>
+              </div>
+              <div class="row g-3 mt-2 mini-cart">
+                <div class="col-6">
+                  <a href="#" class="w-100 btn mini-cart__checkout btn-dark text-white shadow border-0 rounded-0 p-2" style="border: 2px solid black">Mua</a>
+                </div>
+                <div class="col-6">
+                  <a href="./cart.html" class="w-100 btn mini-cart__viewcart btn-danger border-0 shadow rounded-0 p-2" style="border: 2px solid black">Giỏ hàng</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Navbar Cartttttttttttttttttttttttttttttttttttttttttttttttttttttttt  -->
+          <!-- Modal SEARCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH  -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Tìm kiếm</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- input search  -->
+                  <form class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="form-control" />
+                    <input type="submit" class="btn btn-warning" value="Tìm" />
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MODAL SEARCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH -->
+        </div>
+        <!-- </nav> -->
+        <nav class="d-none d-lg-block border-top border-bottom">
+          <div class="container border-primary-subtle">
+            <div class="row">
+              <div class="col-md-10">
+                <div class="navbar navbar-expand-lg bg-white">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        Phổ biến</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        Điện thoại</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-laptop"></i>
+                        Máy tính</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-hat-wizard"></i>
+                        Phụ kiện</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-headphones"></i>
+                        Tai nghe</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-regular fa-clock"></i>
+                        Smart Watch</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-camera"></i>
+                        Web Cam</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2 d-flex justify-content-end">
+                <div class="navbar bg-white">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        0313728397
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section class="banner_introduce bg-secondary-subtle p-5">
+          <div class="container">Trang chủ / Sản phẩm / Havit 2218D 3.5mm Single Port Headphone</div>
+        </section>
+
+        <section class="container detail-product-wrapper mt-5">
+          <div class="row">
+            <div class="detail-product-wrapper__left col-12 col-sm-5">
+              <div class="owl-carousel carousel-product__images owl-theme">
+                <div class="item" data-hash="zero">
+                  <img style="max-height: 500px" class="w-100 img-fluid object-fit-contain" src="../images/prod_9.png" alt="" />
+                </div>
+                <div class="item" data-hash="two">
+                  <img style="max-height: 500px" class="w-100 img-fluid object-fit-contain" src="../images/prod_9_1.png" alt="" />
+                </div>
+                <div class="item" data-hash="three">
+                  <img style="max-height: 500px" class="w-100 img-fluid object-fit-contain" src="../images/prod_9_2.png" alt="" />
+                </div>
+                <div class="item" data-hash="four">
+                  <img style="max-height: 500px" class="w-100 img-fluid object-fit-contain" src="../images/prod_9_3.png" alt="" />
+                </div>
+              </div>
+              <div class="g-2 row detail-product__images mt-1">
+                <a class="col-3 text-white" href="#zero">
+                  <img style="max-height: 110px" class="w-100 img-fluid object-fit-contain" src="../images/prod_9.png" alt="" />
+                </a>
+                <a class="col-3 text-white" href="#two">
+                  <img style="max-height: 110px" class="w-100 img-fluid object-fit-contain" src="../images/prod_9_1.png" alt="" />
+                </a>
+                <a class="col-3 text-white" href="#three">
+                  <img style="max-height: 110px" class="w-100 img-fluid object-fit-contain" src="../images/prod_9_2.png" alt="" />
+                </a>
+                <a class="col-3 text-white" href="#four">
+                  <img style="max-height: 110px" class="w-100 img-fluid object-fit-contain" src="../images/prod_9_3.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="detail-product-wrapper__right col-12 col-sm-7">
+              <!-- name product  -->
+              <h3 class="title mb-3">Canon EOS C300 Mark III Digital Cinema Camera (Body only)</h3>
+
+              <!-- price  -->
+              <div class="detail-product_price mb-3">
+                <span class="text-danger fw-bold fs-3"
+                  >35.000.000đ
+                  <strike>40.000.000đ</strike>
+                  <span class="fs-5 fw-normal text-dark opacity-75">(+Đã bao gồm 15% VAT)</span>
+                </span>
+              </div>
+
+              <!-- describe  -->
+              <p class="fs-5">This Bluetooth speaker has various features such as water resistance, long battery life, built-in microphones for hands-free cTất cảing, and more.</p>
+
+              <!-- config  -->
+              <ul class="list-group-item">
+                <li class="list-group-item">
+                  <img class="fea-icon" src="https://electio.ecom.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/10/svgviewer-output-6.svg" alt="" />
+                  <span class="fea-txt">Model: UB7OM</span>
+                </li>
+                <li class="list-group-item">
+                  <img class="fea-icon" src="https://electio.ecom.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/10/svgviewer-output-6.svg" alt="" />
+
+                  <span class="fea-txt">Dynamic Bass Boost Drivers and Dual Passive Radiators</span>
+                </li>
+                <li class="list-group-item">
+                  <img class="fea-icon" src="https://electio.ecom.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/10/svgviewer-output-6.svg" alt="" />
+
+                  <span class="fea-txt">2 x 14W Output Power</span>
+                </li>
+                <li class="list-group-item">
+                  <img class="fea-icon" src="https://electio.ecom.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/10/svgviewer-output-6.svg" alt="" />
+
+                  <span class="fea-txt">IP67 Dustproof &amp; Waterproof</span>
+                </li>
+                <li class="list-group-item">
+                  <img class="fea-icon" src="https://electio.ecom.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/10/svgviewer-output-6.svg" alt="" />
+
+                  <span class="fea-txt">Convenient Hands-Free Tất cảing</span>
+                </li>
+              </ul>
+
+              <!-- btn  -->
+              <div class="btn-product mb-3">
+                <input class="btn bg-secondary-subtle col-2 col-sm-2 col-lg-1 py-2 rounded-0" type="text" value="-" />
+                <input class="btn bg-secondary-subtle col-3 col-sm-3 col-lg-1 py-2 rounded-0" type="number" min="0" max="200" value="0" />
+                <input class="btn bg-secondary-subtle col-2 col-sm-2 col-lg-1 py-2 rounded-0" type="text" value="+" />
+              </div>
+              <div class="btn_buy">
+                <input class="btn col-4 py-3 btn-warning rounded-0" type="submmit" value="Mua ngay" />
+                <input class="btn btn-danger col-4 py-3 rounded-0" type="submmit" value="Thêm giỏ hàng" />
+              </div>
+
+              <p class="mt-3">
+                <i class="fa-solid fa-location-dot"></i>
+                Đơn hàng giao hàng miễn phí trong vòng 10 tháng 3 năm 2024 - 18 tháng 3 năm 2024 &amp; đối với tất cả các đơn hàng trên 1,000,000 ₫
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-product__information container mt-5">
+          <nav>
+            <div class="ps-0 nav nav-tabs border-0" id="nav-tab" role="tablist">
+              <button class="nav-link nav-link__btn-detail border-0 fs-3 active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                Mô tả
+              </button>
+              <button class="nav-link nav-link__btn-detail border-0 fs-3" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                Đánh giá (0)
+              </button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+              <h3 class="mt-3">Thông tin sản phẩm</h3>
+              <h5>iPhone 15 Pro Max 256GB giá rẻ, thu cũ 90%, trả góp 0%, bảo hành 5 năm. Hình ảnh, thông tin đánh giá trước khi mua</h5>
+              <p class="my-4">
+                iPhone 15 Pro Max 256GB chính thức được Apple tung ra thị trường vào ngày 11 tháng 09 tại sự kiện "Wonderlust". Ngay từ khi ra mắt, điện thoại đã gây ấn tượng mạnh bởi con chip A17 Pro mới mạnh mẽ, thân máy Titan,
+                nút Action Button, cổng sạc USB-C và nhiều tính năng camera ấn tượng khác. Cùng điểm qua một số nâng cấp nổi bật và các ưu đãi khi mua thiết bị tại XTmobile nhé! Khi chọn mua iPhone 15 Pro Max 256GB tại hệ thống
+                XTmobile, bạn sẽ nhận được nhiều ưu đãi cực kỳ hấp dẫn đi kèm với chính sách bảo hành, bảo dưỡng đầy đủ. Giảm 1.2% giá trị sản phẩm nếu bạn đăng ký là thành viên XTmember Khi thanh toán qua thẻ Kredivo, bạn còn
+                được giảm thêm 500.000 đồng Chính sách bảo hành 12 tháng tại trung tâm bảo hành chính hãng Apple 1 đổi 1 trong vòng 30 ngày đối với trường hợp lỗi từ NSX Nếu bạn đang sở hữu điện thoại cũ và muốn lên đời iPhone 15
+                Pro Max, có thể tham khảo chương trình thu cũ đổi mới tại XTmobile. Hình thức này sẽ giúp bạn tiết kiệm thời gian, chi phí và vẫn hưởng được đầy đủ các chế độ bảo hành từ hãng.
+              </p>
+              <!-- SEE MORERRRRRRRRRRRRRRRRR  -->
+              <p>
+                <button class="btn bg-secondary-subtle btn-lg w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">Xem thêm...</button>
+              </p>
+              <div>
+                <div class="collapse" id="collapseWidthExample">
+                  <div class="">
+                    <h4>iPhone 15 Pro Max giá bao nhiêu? Bảng giá iPhone 15 Pro Max mới nhất 2023</h4>
+                    <p>
+                      iPhone 15 Pro Max 256GB là phiên bản dung lượng thấp nhất trong dòng Pro Max, phù hợp với các đối tượng không có nhu cầu lưu trữ dữ liệu số lượng lớn. Đây cũng được xem là giải pháp tiết kiệm nếu bạn đang
+                      muốn sở hữu ngay chiếc flagship cao cấp nhất nhà Apple. Hiện phiên bản này đang mở bán với giá khởi điểm là 1.199 USD. Để tìm hiểu thêm về các biến thể khác, bạn có thể tham khảo bảng giá dưới đây. <br />
+                      <br />
+                    </p>
+                    <h4>Mở hộp iPhone 15 Pro Max 256GB</h4>
+                    <div class="text-center"><img class="text-center" src="https://cdn.xtmobile.vn/vnt_upload/news/09_2023/21/hinh-anh-vo-hop-iphone-15-pro-max-xtmobile.jpg" alt="" /></div>
+                    <br />
+                    <br />
+                    Tương tự với các model tiền nhiệm, iPhone 15 Pro Max 256GB vẫn được đóng gói trong một chiếc hộp vuông vức màu trắng. Kèm theo đó là dòng chữ "iPhone" được in ở hai mặt bên, logo Apple nằm phía trên và dưới đáy
+                    hộp. Điểm ấn tượng nhất ở đây chính là phần in hình mặt trước điện thoại với tông màu titan cực kỳ đẹp mắt.
+                    <h4 class="my-3">Hình ảnh mở hộp iPhone 15 Pro Max 256GB</h4>
+                    Kể từ dòng iPhone 13 trở đi, Apple đã chính thức loại bỏ màng seal nilon nhằm bảo vệ môi trường. Phương pháp đóng gói bằng giấy mới cũng giúp cho người dùng dễ dàng bóc máy hơn. <br />
+                    <div class="text-center">
+                      <img class="" src="https://cdn.xtmobile.vn/vnt_upload/news/09_2023/21/hinh-anh-mo-hop-iphone-15-pro-max-xtmobile.jpg" alt="" />
+                    </div>
+                    <br />
+                    <br />
+                    Hơn nữa, các cạnh viền ở xung quanh máy đã được làm bo cong mềm mại hơn thay vì vuông vức như trước. Sự thay đổi này đã giúp cho cảm giác cầm nắm được thoải mái, nhẹ nhàng hơn. Nếu sử dụng điện thoại trong thời
+                    gian dài, bạn sẽ cảm nhận được sự khác biệt khi so với những thiết bị iPhone trước đây của Apple. <br />
+                    <div class="text-center"><img src="https://cdn.xtmobile.vn/vnt_upload/news/09_2023/21/hinh-anh-iphone-15-pro-max-ben-trong-hop-xtmobile.jpg" alt="" /></div>
+                    <br />
+                    <br />
+                    Sau khi bóc seal và tiến hành đập hộp iPhone 15 Pro Max 256GB, bạn sẽ nhận được máy đi kèm với các phụ kiện cơ bản như: Sách hướng dẫn sử dụng, cáp sạc USB-C sang USB-C, bộ hình dán sticker nhà Táo và 1 dụng cụ
+                    chọc khe SIM. <br />
+                    <div class="text-center"><img src="https://cdn.xtmobile.vn/vnt_upload/news/09_2023/21/cap-sac-usb-c-cua-iphone-15-pro-max-xtmobile.jpg" alt="" /></div>
+                    <br />
+                    <br />
+                    Các phụ kiện khác như tai nghe và củ sạc sẽ không được bao gồm khi mua thiết bị này. Điều này cũng giống với dòng iPhone 14 trước đây. <br />
+                    <h4 class="my-3">Đánh giá chi tiết iPhone 15 Pro Max 256GB</h4>
+                    Sau khi điểm qua một vài thông số cơ bản của thiết bị, XTmobile sẽ phân tích sâu hơn về thiết kế, hiệu năng, camera và dung lượng pin của máy. Thông qua nội dung này, bạn sẽ có thể hiểu được lý do vì sao iPhone
+                    15 Pro Max 256GB lại được nhiều người đánh giá cao và ưa chuộng đến vậy. <br />
+                    <br />Thiết kế sang trọng, viền titan bền bỉ, trọng lượng nhẹ hơn Về tổng thể, iPhone 15 Pro Max 256GB vẫn sở hữu ngôn ngữ thiết kế tương tự như các model tiền nhiệm. Tuy nhiên, Apple vẫn có một số sự điều
+                    chỉnh đáng chú ý nhằm tạo sự khác biệt. Theo đó, khung viền máy được làm bằng chất liệu Titan thay vì thép không gỉ. Đây được xem là loại hợp kim cao cấp sử dụng cho tàu vũ trụ. nó không những mang lại trọng
+                    lượng nhẹ hơn mà còn tạo được độ bền bỉ và chắc chắn. Giờ đây, trọng lượng máy đã được tối ưu từ 240g xuống còn 221g. <br />
+                    Hơn nữa, các cạnh viền ở xung quanh máy đã được làm bo cong mềm mại hơn thay vì vuông vức như trước. Sự thay đổi này đã giúp cho cảm giác cầm nắm được thoải mái, nhẹ nhàng hơn. Nếu sử dụng điện thoại trong thời
+                    gian dài, bạn sẽ cảm nhận được sự khác biệt khi so với những thiết bị iPhone trước đây của Apple. <br />
+                    <h4 class="my-3">Xuất hiện 4 tùy chọn màu hoàn toàn mới</h4>
+                    Dường như Titanium chính là một trong những điểm khác biệt nhất mà Apple muốn nhấn mạnh trong sự xuất hiện lần này. Bởi bảng màu mới trên thiết bị cũng được lấy cảm hướng từ vật liệu này. Cụ thể, iPhone 15 Pro
+                    Max 256GB sở hữu 4 tông màu gồm Titan Tự nhiên, Titan Xanh, Titan Trắng và Titan Đen. Đây đều có các màu sắc đơn giản nhưng không kém phần sang trọng và đẳng cấp. <br />
+                    <div class="text-center">
+                      <img src="https://cdn.xtmobile.vn/vnt_upload/news/10_2023/10/4-tuy-chon-mau-tren-iphone-15-pro-max-xtmobile.jpg" alt="" />
+                    </div>
+                    <br />
+                    <br />
+                    Đặc biệt hai phiên bản mới chưa từng xuất hiện trên dòng iPhone là Titan Tự nhiên và Titan Xanh hiện đang được khá nhiều người dùng ưa chuộng. Nếu bạn mong muốn sở hữu một chiếc điện thoại hoàn toàn khác biệt
+                    so với các dòng iPhone trước thì đây chính là hai sự lựa chọn vô cùng tuyệt vời <br />
+                    <h4 class="my-3">Cổng sạc USB-C 3 với tốc độ kết nối cực nhanh</h4>
+                    Đúng như dự đoán, Apple đã quyết định loại bỏ cổng Lightning truyền thống để chuyển sang cổng sạc USB. Sự thay đổi này bị ép buộc bởi luật pháp EU về mặt kỹ thuật cho phép các công ty áp dụng tiêu chuẩn cổng
+                    sạc chung (USB-C) cho đến cuối năm 2024. Đây được xem là tín hiệu đáng mừng, bởi nó sẽ giúp đồng bộ hóa các thiết bị trong hệ sinh thái Apple như iPhone, Macbook, iPad chỉ với một cáp sạc duy nhất. <br />
+                    <div class="text-center"><img src="https://cdn.xtmobile.vn/vnt_upload/news/10_2023/10/iphone-15-pro-max-so-huu-cong-sac-usb-c-moi-xtmobile.jpg" alt="" /> <br /></div>
+                    <br />
+                    <br />
+                    Bên cạnh đó, tốc độ truyền dữ liệu cũng sẽ nhanh hơn và dễ dàng kết nối hơn. Cụ thể, các mẫu Pro sẽ được hỗ trợ tốc độ USB 3 nhanh gấp 20 lần so với USB 2.0 (Lightning). Bạn có thể nhanh chóng chuyển các file
+                    video ProRes dung lượng hàng chục GB trong khoảng vài giây. <br />
+                    <h4 class="my-3">Nút Action Button cực thú vị</h4>
+                    Một trong những sự thay đổi khá thú vị trên dòng iPhone 15 Pro Max 256GB chính là nút Action mới. Nút bấm này được đặt thay thế vị trí cho nút Tắt tiếng trước đây. Nó cho phép người dùng tùy chỉnh hành động dựa
+                    theo sở thích và mục đích của bản thân. Bạn có thể sử dụng nó để kích hoạt tính năng camera, đèn pin, dịch, ghi âm, kính lúp,... <br />
+                    <div class="text-center">
+                      <img src="https://cdn.xtmobile.vn/vnt_upload/news/10_2023/10/nut-action-tren-iphone-15-pro-max-xtmobile.jpg" alt="" />
+                    </div>
+                    <br />
+                    <br />
+                    Chỉ với thao tác nhấn và giữ đơn giản, kết hợp cùng tính năng phản hồi xúc giác được tinh chỉnh và các gợi ý trực quan trên Dynamic Island. Nhờ đó, bạn có thể dễ dàng khởi chạy các tác vụ mà mình mong muốn.
+                    <br />
+                    <h4 class="my-3">Hệ thống camera với khả năng zoom quang 5x</h4>
+                    Lần đầu tiên, một chiếc iPhone lại được thiết lập một ống kính tele với khả năng thu phóng quang học lên đến 5x. Và iPhone 15 Pro Max 256GB cũng là thiết bị duy nhất sở hữu tính năng độc quyền này. Cụ thể, hệ
+                    thống camera bao gồm một cảm biến chính 48MP, một cảm biến góc siêu rộng 12MP và một ống kính tele 12MP 5x. Theo Apple, nhờ vào sự kết hợp giữa phần cứng và phần mềm, điện thoại mang lại khả năng nhiếp ảnh
+                    tương đương với bảy ống kính chuyên nghiệp. <br />
+                    <div class="text-center">
+                      <img src="https://cdn.xtmobile.vn/vnt_upload/news/09_2023/21/iPhone-15-Pro-Max-so-huu-camera-tele-co-do-zoom-quang-5x-xtmobile.jpg" alt="" />
+                    </div>
+                    <!-- </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+              <div class="row g-4 mt-3">
+                <div class="col-sm-6">
+                  <div class="card rounded-0">
+                    <div class="card-body card__star">
+                      <h3 class="card-title">
+                        0.00
+                        <span class="fs-5 opacity-75"> ( 0 đánh giá) </span>
+                      </h3>
+                      <div class="row g-2 card__star">
+                        <p class="col-auto">
+                          5
+                          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                        </p>
+
+                        <div class="col-8 d-flex align-items-center">
+                          <p class="w-100 col-8 bg-secondary-subtle" style="height: 10px"></p>
+                        </div>
+
+                        <p class="col-auto">0%</p>
+                      </div>
+                      <div class="row g-2 card__star">
+                        <p class="col-auto">
+                          4
+                          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                        </p>
+
+                        <div class="col-8 d-flex align-items-center">
+                          <p class="w-100 col-8 bg-secondary-subtle" style="height: 10px"></p>
+                        </div>
+
+                        <p class="col-auto">0%</p>
+                      </div>
+                      <div class="row g-2 card__star">
+                        <p class="col-auto">
+                          3
+                          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                        </p>
+
+                        <div class="col-8 d-flex align-items-center">
+                          <p class="w-100 col-8 bg-secondary-subtle" style="height: 10px"></p>
+                        </div>
+
+                        <p class="col-auto">0%</p>
+                      </div>
+                      <div class="row g-2 card__star">
+                        <p class="col-auto">
+                          2
+                          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                        </p>
+
+                        <div class="col-8 d-flex align-items-center">
+                          <p class="w-100 col-8 bg-secondary-subtle" style="height: 10px"></p>
+                        </div>
+
+                        <p class="col-auto">0%</p>
+                      </div>
+                      <div class="row g-2 card__star">
+                        <p class="col-auto">
+                          1
+                          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                        </p>
+
+                        <div class="col-8 d-flex align-items-center">
+                          <p class="w-100 col-8 bg-secondary-subtle" style="height: 10px"></p>
+                        </div>
+
+                        <p class="col-auto">0%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alert alert-warning rounded-0 mt-3" role="alert">Hiện tại không có đánh giá nào.</div>
+                </div>
+                <div class="col-sm-6">
+                  <h1>Review This Product</h1>
+                  <form class="row g-2" action="#">
+                    <div class="col-6">
+                      <label for="#" class="form-label fw-medium">Tên*:</label>
+                      <input type="text" class="rounded-0 form-control p-3" placeholder="Tên của bạn.." required />
+                    </div>
+                    <div class="col-6">
+                      <label for="#" class="form-label fw-medium">Email*:</label>
+                      <input type="email" class="rounded-0 form-control p-3" placeholder="Nhập email của bạn.." required />
+                    </div>
+                    <div class="fs-4 col-12 product-review my-3">
+                      Đánh giá sao:
+                      <span
+                        ><a href="#"><i class="fa-solid fa-star" style="color: #d6d6d6"></i></a
+                      ></span>
+                      <span
+                        ><a href="#"><i class="fa-solid fa-star" style="color: #d6d6d6"></i></a
+                      ></span>
+                      <span
+                        ><a href="#"><i class="fa-solid fa-star" style="color: #d6d6d6"></i></a
+                      ></span>
+                      <span
+                        ><a href="#"><i class="fa-solid fa-star" style="color: #d6d6d6"></i></a
+                      ></span>
+                      <span
+                        ><a href="#"><i class="fa-solid fa-star" style="color: #d6d6d6"></i></a
+                      ></span>
+                    </div>
+                    <label for="#" class="fs-5 fw-medium form-label fw-medium">Chia sẽ thêm về cảm nhận của bạn:</label>
+                    <div class="form-floating">
+                      <textarea class="rounded-0 form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px"></textarea>
+                      <label for="floatingTextarea2">Chia sẻ</label>
+                    </div>
+
+                    <div class="col-12">
+                      <button class="btn btn-danger btn-lg rounded-0" type="submit">Gửi</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="container product-trending mt-5">
+          <div data-aos-once="true" data-aos="fade-right" class="row product-trending__tittle">
+            <div class="col-12">
+              <p class="fs-4 text-danger">Khuyến mãi lớn</p>
+              <h2 class="fs-1 fw-semibold">Sản phẩm liên quan</h2>
+            </div>
+          </div>
+          <!-- <div class="row g-4 product-trending__content">
+            <div data-aos-once="true" data-aos="flip-up" class="col-12 col-sm-6 col-lg-3">
+              <div class="card card-product position-relative">
+                <span style="top: 1%; left: 2%" class="position-absolute badge rounded-1 p-2 bg-danger"> -5% </span>
+                <img src="../images/prod_1.png" style="width: 100%; height: 20rem" class="card-product__img card-img-top img-fluid object-fit-cover" alt="..." />
+                <div class="card-body">
+                  <p class="card-product_type">Chuột máy tính</p>
+                  <a style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; height: 3.7rem" href="#" class="card-product__tittle fs-5 card-title text-decoration-none fw-medium">
+                    Sony PlayStation VR2 Approx. 110°, Communication​ With PS5
+                  </a>
+                  <p class="card-product__star">
+                    <i class="fa-solid fa-star" style="color: #bcbec2"></i>
+                    <i class="fa-solid fa-star" style="color: #bcbec2"></i>
+                    <i class="fa-solid fa-star" style="color: #bcbec2"></i>
+                    <i class="fa-solid fa-star" style="color: #bcbec2"></i>
+                    <i class="fa-solid fa-star" style="color: #bcbec2"></i>
+                  </p>
+                  <p class="card-product__quantity">Có sẵn: <span style="letter-spacing: 5px; font-weight: 600; font-size: 1.1rem" class="text-danger">0/145</span></p>
+                  <hr class="border border-danger border-2 opacity-100" />
+                  <p class="mt-3">
+                    <span class="card-price fw-medium fs-5">1,150,000₫</span> &nbsp;
+                    <del class="opacity-50"> 1,505,000₫ </del>
+                  </p>
+                  <div class="card-product__btn">
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <a href="#" class="col-12 btn btn-warning">Mua</a>
+                      </div>
+                      <div class="col-6">
+                        <a href="#" class="col-12 btn btn-danger">Thêm</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="owl-carousel carousel-related__products owl-theme">
+            <div class="item">
+              <div class="col-12">
+                <div class="card card-product position-relative">
+                  <span style="top: 1%; left: 2%" class="position-absolute badge rounded-1 p-2 bg-danger"> -5% </span>
+                  <img src="../images/prod_1.png" style="width: 100%; height: 20rem" class="card-product__img card-img-top img-fluid object-fit-cover" alt="..." />
+                  <div class="card-body">
+                    <p class="card-product_type">Chuột máy tính</p>
+                    <a style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; height: 3.7rem" href="#" class="card-product__tittle fs-5 card-title text-decoration-none fw-medium">
+                      Sony PlayStation VR2 Approx. 110°, Communication​ With PS5
+                    </a>
+                    <p class="card-product__star">
+                      <i class="fa-solid fa-star" style="color: #bcbec2"></i>
+                      <i class="fa-solid fa-star" style="color: #bcbec2"></i>
+                      <i class="fa-solid fa-star" style="color: #bcbec2"></i>
+                      <i class="fa-solid fa-star" style="color: #bcbec2"></i>
+                      <i class="fa-solid fa-star" style="color: #bcbec2"></i>
+                    </p>
+                    <p class="card-product__quantity">Có sẵn: <span style="letter-spacing: 5px; font-weight: 600; font-size: 1.1rem" class="text-danger">0/145</span></p>
+                    <hr class="border border-danger border-2 opacity-100" />
+                    <p class="mt-3">
+                      <span class="card-price fw-medium fs-5">1,150,000₫</span> &nbsp;
+                      <del class="opacity-50"> 1,505,000₫ </del>
+                    </p>
+                    <div class="card-product__btn">
+                      <div class="row g-2">
+                        <div class="col-6">
+                          <a href="#" class="col-12 btn btn-warning">Mua</a>
+                        </div>
+                        <div class="col-6">
+                          <a href="#" class="col-12 btn btn-danger">Thêm</a>
+                        </div>
+                        <!-- <a href="#" class="col-6 btn btn-primary">Thêm</a> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="container py-5">
+        <div class="row py-5 g-5">
+          <div class="col-lg-3">
+            <div class="col-5 col-sm-9">
+              <img class="w-100" src="https://e-tech.monamedia.net/wp-content/uploads/2024/03/mona-2-e1709794932514.png" alt="" />
+            </div>
+            <p class="fs-6 opacity-75 my-3">Với chất lượng hàng đầu, chúng tôi cam kết mang đến cho khách hàng những trải nghiệm tuyệt vời và sự hài lòng tuyệt đối.</p>
+            <h4 class="fw-semibold mb-3">Theo dõi</h4>
+            <div class="icon">
+              <a class="text-dark" href="#"><i class="me-2 opacity-50 fa-brands fa-xl fa-facebook-f"></i></a>
+              <a class="text-dark" href="#"><i class="me-2 opacity-50 fa-brands fa-square-instagram fa-xl"></i></a>
+              <a class="text-dark" href="#"><i class="opacity-50 fa-brands fa-twitter fa-xl"></i></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4 class="fw-semibold">Thông tin</h4>
+            <ul class="list-group-item">
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Xu Hướng</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Bán Chạy</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Giảm Giá</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Sản Phẩm Mới</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Còn Hàng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4 class="fw-semibold">Danh mục</h4>
+            <ul class="list-group-item">
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Trang chủ</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Giới thiệu</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Sản phẩm</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Tin tức</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4 class="fw-semibold">Liên kết</h4>
+            <ul class="list-group-item">
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Tài Khoản</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Đơn Hàng </a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Mục Yêu Thích</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Hoàn Trả</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Chính Sách</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <h4 class="fw-semibold">Thông tin cửa hàng</h4>
+            <ul class="list-group-item">
+              <li class="list-group-item mt-4 d-flex">
+                <div class="mt-2 pb-0 me-1">
+                  <i class="fa-solid fa-square-phone fa-2xl" style="color: #cec92c"></i>
+                </div>
+                <div>
+                  <p class="p-0 m-0">Bạn cần trợ giúp?</p>
+                  <p class="fs-5 opacity-50">0799529613</p>
+                </div>
+              </li>
+              <li class="list-group-item mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Địa chỉ: QTSC 9 Building, Tô Ký, Tân Chánh Hiệp, Quận 12, Thành phố Hồ Chí Minh, Việt Nam</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Email: toan@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12">
+            <hr class="border border-secondary-subtle border-1 opacity-25" />
+
+            Nguồn tham khảo <img class="w-25" src="https://e-tech.monamedia.net/wp-content/uploads/2024/03/logo-mona-thu-gon.png" alt="" />
+            <p class="mt-3">© Thực hiện: <strong>PS28740</strong></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/d2eef4e278.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./public/js/main.js"></script>
+  </body>
+</html>

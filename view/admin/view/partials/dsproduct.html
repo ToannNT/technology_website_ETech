@@ -1,0 +1,50 @@
+<!-- DataTales Example -->
+<div class="card shadow mt-2">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Tất cả sản phẩm</h6>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table text-center align-middle">
+        <thead>
+          <tr class="col-12">
+            <th scope="col-1">STT</th>
+            <th scope="col-2">Tên</th>
+            <th scope="col-1">Hình</th>
+            <th scope="col-1">Giá</th>
+            <th scope="col-1">Giá giảm</th>
+            <th scope="col-1">Số lượng</th>
+            <th scope="col-1">Danh mục</th>
+            <th scope="col-2">Chức năng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="listsp in dssp" class="col-12">
+            <td class="col-1 fw-medium">{{$index+1}}</td>
+            <td class="col-2 fw-medium">
+              <p style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden">{{listsp.name}}</p>
+            </td>
+            <td class="col-1">
+              <img style="width: 70px" class="img-fluid object-fit-cover" ng-src="{{isBase64Image(listsp.img[0]) ? listsp.img[0] : '../../images/product/' + listsp.img[0]}}" alt="" />
+            </td>
+            <td class="col-1">{{listsp.price | number: '0'}} ₫</td>
+            <td class="col-1 fw-medium">{{listsp.reducedPrice ? listsp.reducedPrice : 0 | number: '0'}} ₫</td>
+
+            <td class="col-1 fw-medium">{{listsp.quantity}}</td>
+            <td class="col-1 fw-medium">
+              {{ listsp.id_catalog == 1 ? 'Điện thoại' : listsp.id_catalog == 2 ? 'iPad' : listsp.id_catalog == 3 ? 'Smart watch' : listsp.id_catalog == 4 ? 'Tai nghe' : listsp.id_catalog == 5 ? 'Máy ảnh' : listsp.id_catalog == 6
+              ? 'Kính thực tế ảo' : 'Không xác định' }}
+            </td>
+
+            <td class="col-2">
+              <div class="flex-column">
+                <a href="#!editproduct/{{listsp.id}}" class="text-decoration-none text-dark fw-medium me-1 bg-warning btn">Sửa</a>
+                <button ng-click="deleProduct(listsp.id)" class="text-decoration-none text-bg-danger fw-medium text-white btn">Xóa</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

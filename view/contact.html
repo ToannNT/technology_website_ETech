@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"
+      integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <header>
+        <div class="container" style="margin-bottom: 75px">
+          <nav style="height: 75px" class="navbar navbar-expand-lg bg-white fixed-top">
+            <div class="container">
+              <a class="col-4 col-sm-3 col-lg-2 navbar-brand me-auto" href="./home.html"><img class="img-fluid" src="https://e-tech.monamedia.net/wp-content/uploads/2024/03/mona-2-e1709794932514.png" alt="" /></a>
+
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header pb-0">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    <a href="./home.html"><img class="img-fluid object-fit-contain" style="width: 50%" src="https://e-tech.monamedia.net/wp-content/uploads/2024/03/mona-2-e1709794932514.png" alt="" /></a>
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body pt-0">
+                  <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="./home.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="#">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="./product.html" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Sản phẩm </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./product.html">Tất cả sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="#">Máy tính</a></li>
+                        <li><a class="dropdown-item" href="#">Camera</a></li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="#">Điện thoại</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="./news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="./contact.html">Liên hệ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="nav">
+                <li class="nav-item">
+                  <button type="button" class="nav-link p-3 btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fs-4 text-black fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </li>
+
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <a class="nav-link p-3" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fs-4 text-black fa-solid fa-user"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="./login.html">Đăng nhập</a></li>
+                      <li><a class="dropdown-item" href="./register.html">Đăng ký</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link p-3 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#Cart_offcanvasRightt" aria-controls="Cart_offcanvasRightt">
+                    <i class="fa-fade">
+                      <i class="fs-4 text-black fa-solid fa-cart-plus fa-shake"></i>
+                      <span class="position-absolute top-75 start-100 translate-middle badge rounded-pill bg-warning"> 0+ </span>
+                    </i>
+                  </a>
+
+                  <!-- <a class="nav-link p-3 position-relative" href="#">
+                    <i class="fa-fade">
+                      <i class="fs-4 text-black fa-solid fa-cart-plus fa-shake"></i>
+                      <span class="position-absolute top-75 start-100 translate-middle badge rounded-pill bg-warning"> 0+ </span>
+                    </i>
+                  </a> -->
+                </li>
+              </ul>
+              <button class="navbar-toggler btn-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+
+          <!-- cart navbar Hiddeneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee  -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="Cart_offcanvasRightt" aria-labelledby="offcanvasRightLabel">
+            <div style="border-bottom: 2px solid rgb(238, 238, 238)" class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">Giỏ hàng (0 sản phẩm)</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <div class="card mb-3 border-bottom border-0 rounded-0" style="max-width: 540px">
+                <div class="row g-0">
+                  <div class="col-md-4" style="padding: 16px">
+                    <img style="height: 100px" src="../images/prod_1.png" class="img-fluid object-fit-cover" alt="..." />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden" class="card-title">Meta Quest 2 128 GB All-in-One VR System Blazing-fast processor.</h5>
+                      <p class="card-text">Đơn giá 925,000 ₫.</p>
+                      <div class="quantity">
+                        <input type="button" value="-" class="minus btn rounded-0 m-0" style="background-color: #e3e3e3" />
+                        <input class="btn btn-warning rounded-0 px-1" type="number" min="0" max="500" value="1" value="" />
+                        <input type="button" value="+" class="plus m-0 btn rounded-0" style="background-color: #e3e3e3" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 border-bottom border-0 rounded-0" style="max-width: 540px">
+                <div class="row g-0">
+                  <div class="col-md-4" style="padding: 16px">
+                    <img style="height: 100px" src="../images/prod_1.png" class="img-fluid object-fit-cover" alt="..." />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden" class="card-title">Meta Quest 2 128 GB All-in-One VR System Blazing-fast processor.</h5>
+                      <p class="card-text">Đơn giá 925,000 ₫.</p>
+                      <div class="quantity">
+                        <input type="button" value="-" class="minus btn rounded-0 m-0" style="background-color: #e3e3e3" />
+                        <input class="btn btn-warning rounded-0 px-1" type="number" min="0" max="500" value="1" value="" />
+                        <input type="button" value="+" class="plus m-0 btn rounded-0" style="background-color: #e3e3e3" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="total">
+                <span class="total-title fs-5">Tổng phụ : </span>
+                <span class="total-Price-amount amount fs-4 fw-semibold"> 925,000<span class="total-Price-currencySymbol">₫</span> </span>
+              </div>
+              <div class="row g-3 mt-2 mini-cart">
+                <div class="col-6">
+                  <a href="#" class="w-100 btn mini-cart__checkout btn-dark text-white shadow border-0 rounded-0 p-2" style="border: 2px solid black">Mua</a>
+                </div>
+                <div class="col-6">
+                  <a href="./cart.html" class="w-100 btn mini-cart__viewcart btn-danger border-0 shadow rounded-0 p-2" style="border: 2px solid black">Giỏ hàng</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Navbar Cartttttttttttttttttttttttttttttttttttttttttttttttttttttttt  -->
+          <!-- Modal SEARCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH  -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Tìm kiếm</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- input search  -->
+                  <form class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="form-control" />
+                    <input type="submit" class="btn btn-warning" value="Tìm" />
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MODAL SEARCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH -->
+        </div>
+        <!-- </nav> -->
+      </header>
+      <main>
+        <nav class="d-none d-lg-block border-top border-bottom">
+          <div class="container border-primary-subtle">
+            <div class="row">
+              <div class="col-md-10">
+                <div class="navbar navbar-expand-lg bg-white">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        Phổ biến</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        Điện thoại</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-laptop"></i>
+                        Máy tính</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-hat-wizard"></i>
+                        Phụ kiện</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-headphones"></i>
+                        Tai nghe</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-regular fa-clock"></i>
+                        Smart Watch</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-camera"></i>
+                        Web Cam</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2 d-flex justify-content-end">
+                <div class="navbar bg-white">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        0313728397
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="banner_introduce bg-secondary-subtle p-5">
+          <div class="container">Trang chủ / Liên hệ</div>
+        </section>
+
+        <section class="container section_news mt-5">
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="row g-1 mb-4">
+                <div class="col-12">
+                  <h1 class="fs-2">Liên hệ</h1>
+                </div>
+              </div>
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-lg-6">
+                  <label for="#" class="form-label">Họ tên</label>
+                  <input type="text" class="form-control rounded-0 border-2" style="padding: 12px 0px 12px 10px" id="#" value="" required />
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-lg-6">
+                  <label for="#" class="form-label">Email</label>
+                  <input type="text" class="form-control rounded-0 border-2" style="padding: 12px 0px 12px 10px" id="#" value="" required />
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-lg-6">
+                  <label for="#" class="form-label">Số điện thoại</label>
+                  <input type="text" class="form-control rounded-0 border-2" style="padding: 12px 0px 12px 10px" id="#" value="" required />
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-lg-6">
+                  <label for="#" class="form-label">Chủ đề</label>
+                  <input type="text" class="form-control rounded-0 border-2" style="padding: 12px 0px 12px 10px" id="#" value="" required />
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 250px"></textarea>
+                  <label for="floatingTextarea2">Nội dụng</label>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn btn-danger btn-lg rounded-0" type="submit">Gửi</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-lg-3 mb-3">
+              <div class="row g-1 mb-4">
+                <div class="col-12">
+                  <h1 class="fs-2">Thông tin liên hệ</h1>
+                </div>
+              </div>
+              <div class="row g-1 mb-4">
+                <div class="card rounded-0 p-2 bg-danger">
+                  <div class="card-body">
+                    <div class="g-1 d-flex" style="border-bottom: 1px solid rgba(255, 255, 255, 0.2)">
+                      <div class="me-3">
+                        <i class="fa-solid fa-phone bg-warning p-3"></i>
+                      </div>
+                      <div class="">
+                        <p class="fw-medium fs-5 text-white">Liên hệ</p>
+                        <p class="text-white fs-6">(+84)079523123</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="g-1 d-flex" style="border-bottom: 1px solid rgba(255, 255, 255, 0.2)">
+                      <div class="me-3">
+                        <!-- <i class="fa-solid fa-phone "></i> -->
+                        <i class="fa-solid fa-envelope bg-warning p-3"></i>
+                      </div>
+                      <div class="">
+                        <p class="fw-medium fs-5 text-white">Email</p>
+                        <p class="text-white fs-6">toan70858@gmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-body">
+                    <div class="g-1 d-flex" style="border-bottom: 1px solid rgba(255, 255, 255, 0.2)">
+                      <div class="me-3">
+                        <i class="fa-solid fa-location-dot bg-warning p-3"></i>
+                      </div>
+                      <div class="">
+                        <p class="fw-medium fs-5 text-white">Địa chỉ</p>
+                        <p class="text-white fs-6">QTSC 9 Building, Tô Ký, Quận 12, Thành phố Hồ Chí Minh, Việt Nam</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="p-0 container-fluid mt-5">
+          <iframe
+            class=""
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.444161907923!2d106.62605694340074!3d10.85378292618848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b6c59ba4c97%3A0x535e784068f1558b!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1710945607107!5m2!1svi!2s"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="container-fluid banner-support bg-danger p-5">
+            <div class="container">
+              <div class="row g-4">
+                <div class="col-12 col-sm-3 d-flex justify-content-start align-item-center">
+                  <i class="fa-solid fa-truck-fast fs-3 text-warning me-3" aria-hidden="true"></i>
+                  <div class="banner-support__content">
+                    <h4 class="title text-white">Miễn phí giao hàng</h4>
+                    <p class="text-white">Từ Đơn Hàng Trên 1,000,000 ₫</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-3 d-flex justify-content-start align-item-center">
+                  <i class="fa-solid fa-headphones fs-3 text-warning me-3" aria-hidden="true"></i>
+                  <div class="banner-support__content">
+                    <h4 class="title text-white">Hỗ Trợ 24/7</h4>
+                    <p class="text-white">Nhận Hỗ Trợ Trực Truyến 24/7</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-3 d-flex justify-content-start align-item-center">
+                  <i class="fa-solid fa-money-check-dollar fs-3 text-warning me-3" aria-hidden="true"></i>
+                  <div class="banner-support__content">
+                    <h4 class="title text-white">Hoàn Tiền</h4>
+                    <p class="text-white">Hoàn Trả Trong Vòng 15 Ngày</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-3 d-flex justify-content-start align-item-center">
+                  <i class="fa-solid fa-gift fs-3 text-warning me-3" aria-hidden="true"></i>
+                  <div class="banner-support__content">
+                    <h4 class="title text-white">Mã Quà Tặng</h4>
+                    <p class="text-white">Nhận Mã Khuyến Mãi</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="container py-5">
+        <div class="row py-5 g-5">
+          <div class="col-lg-3">
+            <div class="col-5 col-sm-9">
+              <img class="w-100" src="https://e-tech.monamedia.net/wp-content/uploads/2024/03/mona-2-e1709794932514.png" alt="" />
+            </div>
+            <p class="fs-6 opacity-75 my-3">Với chất lượng hàng đầu, chúng tôi cam kết mang đến cho khách hàng những trải nghiệm tuyệt vời và sự hài lòng tuyệt đối.</p>
+            <h4 class="fw-semibold mb-3">Theo dõi</h4>
+            <div class="icon">
+              <a class="text-dark" href="#"><i class="me-2 opacity-50 fa-brands fa-xl fa-facebook-f"></i></a>
+              <a class="text-dark" href="#"><i class="me-2 opacity-50 fa-brands fa-square-instagram fa-xl"></i></a>
+              <a class="text-dark" href="#"><i class="opacity-50 fa-brands fa-twitter fa-xl"></i></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4 class="fw-semibold">Thông tin</h4>
+            <ul class="list-group-item">
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Xu Hướng</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Bán Chạy</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Giảm Giá</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Sản Phẩm Mới</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Còn Hàng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4 class="fw-semibold">Danh mục</h4>
+            <ul class="list-group-item">
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Trang chủ</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Giới thiệu</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Sản phẩm</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Tin tức</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4 class="fw-semibold">Liên kết</h4>
+            <ul class="list-group-item">
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Tài Khoản</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Đơn Hàng </a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Mục Yêu Thích</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Hoàn Trả</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Chính Sách</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <h4 class="fw-semibold">Thông tin cửa hàng</h4>
+            <ul class="list-group-item">
+              <li class="list-group-item mt-4 d-flex">
+                <div class="mt-2 pb-0 me-1">
+                  <i class="fa-solid fa-square-phone fa-2xl" style="color: #cec92c"></i>
+                </div>
+                <div>
+                  <p class="p-0 m-0">Bạn cần trợ giúp?</p>
+                  <p class="fs-5 opacity-50">0799529613</p>
+                </div>
+              </li>
+              <li class="list-group-item mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Địa chỉ: QTSC 9 Building, Tô Ký, Tân Chánh Hiệp, Quận 12, Thành phố Hồ Chí Minh, Việt Nam</a>
+              </li>
+              <li class="list-group-item mt-4 mb-3">
+                <a class="opacity-75 text-decoration-none text-black" href="#">Email: toan@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12">
+            <hr class="border border-secondary-subtle border-1 opacity-25" />
+
+            Nguồn tham khảo <img class="w-25" src="https://e-tech.monamedia.net/wp-content/uploads/2024/03/logo-mona-thu-gon.png" alt="" />
+            <p class="mt-3">© Thực hiện: <strong>PS28740</strong></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/d2eef4e278.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./public/js/main.js"></script>
+  </body>
+</html>

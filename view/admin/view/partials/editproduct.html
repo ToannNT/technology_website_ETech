@@ -1,0 +1,116 @@
+<!-- DataTales Example -->
+<h1>{{}}</h1>
+<div class="card shadow mt-2">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Thêm sản phẩm mới</h6>
+  </div>
+  <div class="card-body">
+    <!-- <div class="table-responsive"> -->
+    <div class="row">
+      <div class="col-12">
+        <div class="tile">
+          <div class="tile-body">
+            <form name="myForm" ng-submit="" enctype="multipart/form-data" class="row g-3 needs-validation" novalidate>
+              <div class="form-group col-md-3">
+                <label for="danhmucsp" class="control-label">Danh mục<span style="color: red; font-weight: bold">(*)</span></label>
+                <select class="form-select" ng-model="productEdit[0].id_catalog" required>
+                  <option value="">--Chọn danh mục--</option>
+                  <!-- 1111111 -->
+                  <option value="'1'">Điện thoại</option>
+                  <option value="2">iPad</option>
+                  <option value="3">Smart watch</option>
+                  <option value="4">Tai Nghe</option>
+                  <option value="5">Máy Ảnh</option>
+                  <option value="6">Kính thực tế ảo</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="tensp" class="control-label">Tên sản phẩm <span style="color: red; font-weight: bold">(*)</span></label>
+                <input type="text" ng-model="productEdit[0].name" class="form-control" required />
+              </div>
+
+              <div class="form-group col-md-3">
+                <label for="giabansp" class="control-label">Giá chính<span style="color: red; font-weight: bold">(*)</span></label>
+                <input id="giabansp" ng-model="productEdit[0].price" class="form-control" type="number" required />
+              </div>
+
+              <div class="form-group col-md-3">
+                <label for="giabansp" class="control-label">Giá giảm</label>
+                <input id="giabansp" ng-model="productEdit[0].reducedPrice" class="form-control" type="number" />
+              </div>
+
+              <!-- SỐ lượng sản phẩm  -->
+              <div class="form-group col-md-3">
+                <label for="giabansp" class="control-label">Số lượng <span style="color: red; font-weight: bold">(*)</span></label>
+                <input id="giabansp" ng-model="productEdit[0].quantity" class="form-control" type="number" required />
+              </div>
+
+              <div class="form-group col-md-3">
+                <label for="image1">Ảnh sản phẩm 1 <span style="color: red; font-weight: bold">(*)</span></label>
+                <input type="file" id="image1" class="image-input" accept="image/*" onchange="previewImage(this)" required />
+                <!-- <img id="preview1" src="" style="max-width: 200px; max-height: 200px; margin-top: 10px; display: none" /><br /> -->
+              </div>
+
+              <div class="form-group col-md-3">
+                <label for="image2">Ảnh sản phẩm 2 <span style="color: red; font-weight: bold">(*)</span></label>
+                <input type="file" id="image2" class="image-input" accept="image/*" onchange="previewImage(this)" required />
+                <!-- <img id="preview2" src="" style="max-width: 200px; max-height: 200px; margin-top: 10px; display: none" /><br /> -->
+              </div>
+
+              <div class="form-group col-md-3">
+                <label for="image3">Ảnh sản phẩm 3 <span style="color: red; font-weight: bold">(*)</span></label>
+                <input type="file" id="image3" class="image-input" accept="image/*" onchange="previewImage(this)" required />
+                <!-- <img id="preview3" src="" style="max-width: 200px; max-height: 200px; margin-top: 10px; display: none" /><br /> -->
+              </div>
+
+              <div class="form-group col-md-3">
+                <label for="image4">Ảnh sản phẩm 4 <span style="color: red; font-weight: bold">(*)</span></label>
+                <input type="file" id="image4" class="image-input" accept="image/*" onchange="previewImage(this)" required />
+                <!-- <img id="preview4" src="" style="max-width: 200px; max-height: 200px; margin-top: 10px; display: none" /><br /> -->
+              </div>
+
+              <!-- Chi tiết sản phẩm  -->
+              <div class="form-floating col-md-12">
+                <textarea class="form-control" ng-model="description" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px"></textarea>
+                <label for="floatingTextarea2">Mô tả chi tiết sản phẩm</label>
+              </div>
+
+              <div class="form-group col-md-12">
+                <button class="btn btn-success" type="submit">Lưu chỉnh sửa</button>
+              </div>
+            </form>
+
+            <ul>
+              <li ng-repeat="product in dssp | filter: {id: '7e07'}">
+                {{product.name}}
+                <img ng-repeat="image in product.img" ng-src="{{image}}" alt="{{ product.name }}" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+<script>
+  (() => {
+    "use strict";
+    const forms = document.querySelectorAll(".needs-validation");
+    // Loop over them and prevent submission
+    Array.from(forms).forEach((form) => {
+      form.addEventListener(
+        "submit",
+        (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
+  })();
+</script>
